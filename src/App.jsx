@@ -3,7 +3,9 @@ function App() {
 
   return (
     <>
-      <p className='text-3xl text-center '>Helllo World !!!!</p>
+      <div className="h-screen w-full bg-primary text-white">
+        <p className='text-3xl text-center font-heinch '>Helllo IIC </p>
+      </div>
     </>
   )
 }
