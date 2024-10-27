@@ -12,7 +12,7 @@ function Home() {
         <div className="outline outline-[1px] opacity-70 "></div>
         <p className="font-heinch text-2xl my-4">Make Break Create</p>
 
-        
+        <RocketCard />
 
       </section>
       <section>
@@ -98,7 +98,7 @@ function Home() {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
           <div className="mb-4 md:mb-0">
             <a href="mailto:info@skyroot.in" className="hover:text-gray-300">
-              info@skyroot.in
+              info@iic.in
             </a>
           </div>
 
@@ -113,7 +113,7 @@ function Home() {
 
           {/* Copyright */}
           <div className="mt-4 md:mt-0 text-sm text-gray-400">
-            Copyright © 2022 Skyroot Aerospace. All Rights Reserved.
+            Copyright © 2023 IIC Rocket. All Rights Reserved.
           </div>
         </div>
       </div>
@@ -178,13 +178,27 @@ export function MilestoneCard(){
 
 export function RocketCard({data}){
   return (
-    <div className="my-10 px-16 w-full bg-gray-700 h-20">
-      <div>
-        <div>
-
-        </div>
+    <div className="my-10 mx-10 px-6 py-16  bg-gray-700  font-heinch grid grid-cols-3">
+      <div className="col-span-3 lg:col-span-2">
+        {
+          [0,0,0,0].map((item,index)=>{
+            return (
+              <>
+                <div className="flex justify-between text-6xl">
+                  <p className="">VLSV</p>
+                  <p>{">"}</p>
+                </div>
+                <div className="w-full outline outline-[1px] outline-gray-400 "></div>
+                <p>TExtkjafksjf.../</p>
+              </>
+            )
+          }) 
+        }
+        <button className="bg-primary text-white mx-3 mt-8 px-6 py-2 ">Know More</button>
       </div>
-      <div></div>
+      <div>
+        <img src="" alt="" />
+      </div>
     </div>
   )
 }
