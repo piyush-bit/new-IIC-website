@@ -48,8 +48,8 @@ function Home() {
             <div className="mb-6">
               {/* Simplified logo representation */}
               <div className="text-2xl font-bold">
-                SKYROOT
-                <div className="text-sm font-light mt-1">AEROSPACE</div>
+                IIC
+                <div className="text-sm font-light mt-1">Rocketry</div>
               </div>
             </div>
           </div>
