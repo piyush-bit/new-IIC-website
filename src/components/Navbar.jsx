@@ -4,10 +4,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="px-4 py-3 font-heinch">
+    <nav className="px-4 py-3 font-heinch text-lg">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-white text-lg font-bold">
+        <div className="text-white text-5xl my-5 font-bold">
           <a href="#">Logo</a>
         </div>
 
