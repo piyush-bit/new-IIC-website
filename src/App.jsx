@@ -1,3 +1,4 @@
+import Achievements from "./Achievements/Achievements"
 
 function App() {
 
