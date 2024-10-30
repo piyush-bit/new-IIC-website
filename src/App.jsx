@@ -1,14 +1,22 @@
-import Achievements from "./Achievements/Achievements"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
-    <>
-      <div className="h-screen w-full bg-primary text-white">
-        <p className='text-3xl text-center font-heinch '>Helllo IIC </p>
-      </div>
-    </>
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
 
 export default App
+
