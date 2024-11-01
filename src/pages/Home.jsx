@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <section className="text-white mx-6 py-3">
-        <div className="font-heinch text-[12rem] leading-[8rem] my-20">
+        <div className="font-heinch lg:text-[12rem] md:text-[8rem] text-[4rem] lg:leading-[8rem] md:leading-[6rem] leading-[3rem] my-20">
           <p>IDEA</p>
           <p>INOVATION</p>
           <p>CELL</p>
@@ -26,18 +26,25 @@ function Home() {
             <StatElements heading="Projects" content="10" />
             <StatElements heading="Projects" content="10" />
           </div>
+          
           <div></div>
         </div>
 
         <div className="">
           <div className="text-5xl">Achivements</div>
-          <div className="flex flex-wrap ">
+          <div className="flex flex-wrap gap-4">
+            <AchievementCard />
             <AchievementCard />
           </div>
+          <p className=" text-sm ml-2 text-gray-400 underline ">view all</p>
         </div>
 
         <div></div>
       </section>
+      <section className="text-white mx-6 my-16">
+        <TeamCard />
+      </section>
+
       <footer className="bg-gray-900 text-white py-12 relative">
       {/* Main content */}
       <div className="container mx-auto px-6">
@@ -129,7 +136,7 @@ export function AchievementCard() {
     <div className="group flex flex-col w-[24rem] md:w-[28rem] min-h-[30rem] bg-primary ">
       <img
         className="w-full h-80 group-hover:h-[22rem] object-fit"
-        src="https://scontent.frrk2-1.fna.fbcdn.net/v/t39.30808-6/300752840_450356010443331_4214501075564469930_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_539QPY6kdAQ7kNvgFr2Sxb&_nc_ht=scontent.frrk2-1.fna&_nc_gid=AVh5W0DUtVe5bZlqoiVo5aC&oh=00_AYC7FQUapcaj1Y8_FUDF8vfJF569KohmDCoRJIZIOUCFzQ&oe=6724295C"
+        src="https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         alt=""
       />
       <div className="px-2 py-2 h-[10rem]">
@@ -157,7 +164,7 @@ export function MilestoneCard(){
       <div className="grid grid-cols-3  mt-4">
         <img
           className="w-full col-span-3 lg:col-span-2 h-[35 rem] object-cover"
-          src="https://scontent.frrk2-1.fna.fbcdn.net/v/t39.30808-6/300752840_450356010443331_4214501075564469930_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_539QPY6kdAQ7kNvgFr2Sxb&_nc_ht=scontent.frrk2-1.fna&_nc_gid=AVh5W0DUtVe5bZlqoiVo5aC&oh=00_AYC7FQUapcaj1Y8_FUDF8vfJF569KohmDCoRJIZIOUCFzQ&oe=6724295C"
+          src="https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
         />
         <div></div>
@@ -198,6 +205,37 @@ export function RocketCard({data}){
       </div>
       <div>
         <img src="" alt="" />
+      </div>
+    </div>
+  )
+}
+
+function TeamCard (){
+  return (<div>
+    <div>
+      <div className="text-7xl my-2 font-heinch">Team</div>
+      <div className="flex flex-wrap ">
+        <TeamCardElement name="Piyush" image="https://avatars.githubusercontent.com/u/106035971?v=4" designation="CEO" linkedin="https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/" />
+        <TeamCardElement name="Piyush" image="https://avatars.githubusercontent.com/u/106035971?v=4" designation="CEO" linkedin="https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/" />
+      
+        <TeamCardElement name="Prateek" image="https://avatars.githubusercontent.com/u/106035971?v=4" designation="CEO" linkedin="https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/" />
+        <TeamCardElement name="Prateek" image="https://avatars.githubusercontent.com/u/106035971?v=4" designation="CEO" linkedin="https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/" />
+
+      {/* Add more team members here */}  
+      </div>
+      <p className=" text-sm ml-2 text-gray-400 ">view all</p>
+    </div>
+  </div>)
+}
+
+function TeamCardElement ({name, image, designation, linkedin}) {
+  return (
+    <div className="flex flex-col gap-2 m-2">
+      <img src={image} alt="" className="w-40 h-40 rounded-full" />
+      <div className="flex flex-col">
+        <p className="text-xl font-bold">{name}</p>
+        <p className="text-sm text-gray-400">{designation}</p>
+        <a href={linkedin} target="_blank" className="text-sm text-gray-400 underline">linkedin</a>
       </div>
     </div>
   )

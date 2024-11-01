@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <nav className="px-4 py-3 font-heinch text-lg">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx- flex justify-between items-center">
         {/* Logo */}
         <div className="text-white text-5xl my-5 font-bold">
           <a href="#">Logo</a>
@@ -14,18 +14,30 @@ const Navbar = () => {
         {/* Links and Hamburger */}
         <div className="flex items-center">
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden lg:flex space-x-6">
             <a href="#home" className="text-white hover:text-gray-200">
               Home
             </a>
-            <a href="#about" className="text-white hover:text-gray-200">
-              About
+            <a href="#about-us" className="text-white hover:text-gray-200">
+              About Us
             </a>
-            <a href="#services" className="text-white hover:text-gray-200">
-              Services
+            <a href="#projects" className="text-white hover:text-gray-200">
+              Projects
             </a>
-            <a href="#portfolio" className="text-white hover:text-gray-200">
-              Portfolio
+            <a href="#activities" className="text-white hover:text-gray-200">
+              Activities
+            </a>
+            <a href="#all-events" className="text-white hover:text-gray-200">
+              All Events
+            </a>
+            <a href="#achievements" className="text-white hover:text-gray-200">
+              Achievements
+            </a>
+            <a href="#team" className="text-white hover:text-gray-200">
+              Team
+            </a>
+            <a href="#blogs" className="text-white hover:text-gray-200">
+              Blogs
             </a>
             <a href="#contact" className="text-white hover:text-gray-200">
               Contact
@@ -33,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Icon */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white focus:outline-none"
@@ -76,22 +88,46 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#about"
+            href="#about-us"
             className="block px-4 py-2 text-white hover:bg-blue-800"
           >
-            About
+            About Us
           </a>
           <a
-            href="#services"
+            href="#projects"
             className="block px-4 py-2 text-white hover:bg-blue-800"
           >
-            Services
+            Projects
           </a>
           <a
-            href="#portfolio"
+            href="#activities"
             className="block px-4 py-2 text-white hover:bg-blue-800"
           >
-            Portfolio
+            Activities
+          </a>
+          <a
+            href="#all-events"
+            className="block px-4 py-2 text-white hover:bg-blue-800"
+          >
+            All Events
+          </a>
+          <a
+            href="#achievements"
+            className="block px-4 py-2 text-white hover:bg-blue-800"
+          >
+            Achievements
+          </a>
+          <a
+            href="#team"
+            className="block px-4 py-2 text-white hover:bg-blue-800"
+          >
+            Team
+          </a>
+          <a
+            href="#blogs"
+            className="block px-4 py-2 text-white hover:bg-blue-800"
+          >
+            Blogs
           </a>
           <a
             href="#contact"
