@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
-
+import { Members } from "./pages/Members";
 function App() {
 
   return (
@@ -13,6 +13,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/members" element={<Members/>} />
       </Routes>
     </Router>
   )
