@@ -6,6 +6,7 @@ import {
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import { Members } from "./pages/Members";
+import Achievements from "./components/Achievements/Achievements";
 function App() {
 
   return (
@@ -14,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/members" element={<Members/>} />
+        <Route path="/achievements" element={<Achievements/>} />
+        
       </Routes>
     </Router>
   )

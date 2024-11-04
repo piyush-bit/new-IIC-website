@@ -17,22 +17,22 @@ function Home() {
         <RocketCard 
         data={[
   {
-    title: "Falcon Heavy",
+    title: "1",
     summary: "Falcon Heavy is a partially reusable heavy-lift launch vehicle designed and manufactured by SpaceX. It is currently the world's most powerful operational rocket.",
     image: "https://example.com/images/falcon-heavy.jpg"
   },
   {
-    title: "Starship",
+    title: "2",
     summary: "Starship is a fully reusable spacecraft developed by SpaceX for missions to Mars, deep space, and Earth orbit. It's designed to carry both crew and cargo.",
     image: "https://example.com/images/starship.jpg"
   },
   {
-    title: "Atlas V",
+    title: "CAN SAT",
     summary: "Atlas V is an expendable launch system built by the United Launch Alliance, used for launching satellites into orbit, primarily for NASA and the U.S. Department of Defense.",
     image: "https://example.com/images/atlas-v.jpg"
   },
   {
-    title: "Ariane 5",
+    title: "VSLV",
     summary: "Ariane 5 is a European heavy-lift launch vehicle developed by the European Space Agency. It has been widely used for commercial satellite launches.",
     image: "https://example.com/images/ariane-5.jpg"
   }
@@ -333,7 +333,7 @@ export const RocketCard = ({ data }) => {
         animate={{ opacity: 1 }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="text-4xl font-heinch mb-8 text-white">Our Rockets</h2>
+        <h2 className="text-4xl font-heinch mb-8 text-white">Our Products</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* List Section */}
@@ -461,6 +461,20 @@ const TeamCard = () => {
       designation: "CEO",
       linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
       bio: "Innovation specialist and strategic thinker"
+    },
+    {
+      name: "Prateek",
+      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
+      designation: "CEO",
+      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
+      bio: "Innovation specialist and strategic thinker"
+    },
+    {
+      name: "Prateek",
+      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
+      designation: "CEO",
+      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
+      bio: "Innovation specialist and strategic thinker"
     }
   ];
 
@@ -490,7 +504,7 @@ const TeamCard = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
           >
-            View All Team <ChevronRight className="w-4 h-4" />
+            <a href="/members">View All Team</a> <ChevronRight className="w-4 h-4" />
           </motion.button>
         </div>
 

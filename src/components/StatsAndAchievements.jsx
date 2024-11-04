@@ -145,6 +145,20 @@ const AchievementsSection = ({ isVisible }) => {
       date: "2024",
       category: "Innovation"
     },
+    {
+      title: "Best Space Innovation",
+      description: "Recognized for groundbreaking advancements in rocket technology",
+      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg",
+      date: "2024",
+      category: "Innovation"
+    },
+    {
+      title: "Best Space Innovation",
+      description: "Recognized for groundbreaking advancements in rocket technology",
+      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg",
+      date: "2024",
+      category: "Innovation"
+    }
     // Add more achievements
   ];
 
@@ -162,7 +176,7 @@ const AchievementsSection = ({ isVisible }) => {
         </div>
         
         <button className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2">
-          View All
+          <a href="/achievements">View All</a>
           <ChevronRight className="w-4 h-4" />
         </button>
       </motion.div>
