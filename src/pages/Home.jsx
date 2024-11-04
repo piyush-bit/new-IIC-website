@@ -568,16 +568,15 @@ export const Footer = () => {
 
   const companyLinks = [
     { label: "About Us", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "Members", href: "#" },
     { label: "Our Mission", href: "#" },
     { label: "Technology", href: "#" }
   ];
-
   const resourceLinks = [
-    { label: "Launch Services", href: "#" },
+    // { label: "Launch Services", href: "#" },
     { label: "Research", href: "#" },
     { label: "Documentation", href: "#" },
-    { label: "Whistleblower", href: "#" }
+    // { label: "Whistleblower", href: "#" }
   ];
 
   const socialLinks = [
@@ -652,7 +651,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Links */}
           <motion.div {...fadeIn} transition={{ delay: 0.3 }}>
-            <h4 className="text-lg font-medium mb-6">Company</h4>
+            <h4 className="text-lg font-medium mb-6">Club</h4>
             <ul className="space-y-4">
               {companyLinks.map((link) => (
                 <li key={link.label}>
