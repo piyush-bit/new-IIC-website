@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import { Members } from "./pages/Members";
 import Achievements from "./components/Achievements/Achievements";
+import Project from "./pages/Project";
 function App() {
 
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/members" element={<Members/>} />
         <Route path="/achievements" element={<Achievements/>} />
-        
+        <Route path="/project" element={<Project/>} />
       </Routes>
     </Router>
   )

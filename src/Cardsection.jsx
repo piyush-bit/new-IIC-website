@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import Card from './card'; 
+import Card from './card';
 
 const CardSection = ({ items }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedYear, setSelectedYear] = useState('');
   const itemsPerPage = 8;
 
-  // Get unique years and sort them
+  // Extract unique years and sort them
   const years = Array.from(new Set(items.map(item => item.year))).sort().reverse();
 
   // Filter items based on the selected year
   const filteredItems = selectedYear
-    ? items.filter(item => item.year === parseInt(selectedYear)) 
+    ? items.filter(item => item.year.toString() === selectedYear) // Ensure comparison is done as strings
     : items;
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
@@ -44,14 +44,14 @@ const CardSection = ({ items }) => {
         <select 
           value={selectedYear} 
           onChange={(e) => {
-            setSelectedYear(e.target.value);
-            setCurrentPage(1); 
+            setSelectedYear(e.target.value); // Set selectedYear as string
+            setCurrentPage(1); // Reset to the first page when the year changes
           }}
           className="px-3 py-1 rounded bg-primary text-white"
         >
           <option value="">Select Year</option>
           {years.map(year => (
-            <option key={year} value={year}>{year}</option>
+            <option key={year} value={year.toString()}>{year}</option> // Ensure year is string in the select options
           ))}
         </select>
       </div>
@@ -60,11 +60,11 @@ const CardSection = ({ items }) => {
         {currentItems.length > 0 ? (
           currentItems.map((item) => (
             <Card
-              key={item.id} 
+              key={item.id}
               title={item.title}
               description={item.description}
               image={item.image}
-              year={item.year} 
+              year={item.year}
             />
           ))
         ) : (
@@ -73,11 +73,11 @@ const CardSection = ({ items }) => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-4 flex flex-wrap justify-center">
+      <div className="mt-4 flex flex-wrap justify-center space-x-2 mb-6"> {/* Added mb-6 for bottom margin */}
         <button
           onClick={handlePrevious}
           disabled={currentPage === 1}
-          className={`mx-1 px-3 py-1 rounded ${currentPage === 1 ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-black text-white'}`}
+          className={`mx-2 px-[10px] py-[6px] mb-2 rounded ${currentPage === 1 ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-black text-white'}`}
         >
           Previous
         </button>
@@ -86,7 +86,7 @@ const CardSection = ({ items }) => {
           <button
             key={index + 1}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-1 px-3 py-1 rounded ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-black text-white'}`}
+            className={`mx-2 px-[10px] py-[6px] mb-2  rounded ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-black text-white'}`}
           >
             {index + 1}
           </button>
@@ -95,7 +95,7 @@ const CardSection = ({ items }) => {
         <button
           onClick={handleNext}
           disabled={currentPage === totalPages}
-          className={`mx-1 px-3 py-1 rounded ${currentPage === totalPages ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-black text-white'}`}
+          className={`mx-2 px-[10px] py-[6px] mb-2 rounded ${currentPage === totalPages ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-black text-white'}`}
         >
           Next
         </button>
