@@ -3,7 +3,7 @@ import React from 'react';
 import CardSection from '../projectcardsection'; // Ensure the correct import path
 
 const Page = () => {
-  // Example data for 33 cards
+
   const cardData = [
     { title: "VSLV", description: "India’s First Multipurpose Student Rocketry Mission- Launching our own satellite Launching vehicle to a height of 50+ km and deploying a Pico-sat which will monitor the Hirakud Dam along with these it can be used in different applications like Cloud Seeding, short range guided missile.", image: "/images/vslvlogofinal.png" },
     { title: "Krishi Sevak", description: "The Hand-Operated Rice Transplanter is a lightweight, easy to use and low cost machine. It is pedal operated and powered by hands. It has very low maintenance, and does not require any fuel. The parts are made from materials which can be easily obtained from any bicycle shop.", image: "/images/RicePlanterd.jpg" },
@@ -37,7 +37,7 @@ const Page = () => {
 
   return (
 <div className="container mx-auto max-w-screen-xl mx-1 my-0">
-  {/* Passing the card data to the CardSection */}
+  {/* */}
   <CardSection cardData={cardData} />
 </div>
 

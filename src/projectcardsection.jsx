@@ -3,9 +3,9 @@ import Card from './projectcard';
 
 const CardSection = ({ cardData = [] }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const cardsPerPage = 8; // Display 8 cards per page
+  const cardsPerPage = 8; 
 
-  // Calculate the cards to display based on the current page
+  
   const currentCards = Array.isArray(cardData)
     ? cardData.slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
     : [];
@@ -27,7 +27,7 @@ const CardSection = ({ cardData = [] }) => {
     <div className="mx-auto max-w-screen-xl p-0 m-0">
       <h1 className="text-3xl font-bold mb-8 text-center text-white">Our Projects</h1>
 
-      {/* Card Grid with responsive columns and 10px gap */}
+      {/* Card Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-4 justify-items-center">
         {currentCards.length > 0 ? (
           currentCards.map((card, index) => (

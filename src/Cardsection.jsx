@@ -6,12 +6,12 @@ const CardSection = ({ items }) => {
   const [selectedYear, setSelectedYear] = useState('');
   const itemsPerPage = 8;
 
-  // Extract unique years and sort them
+  
   const years = Array.from(new Set(items.map(item => item.year))).sort().reverse();
 
-  // Filter items based on the selected year
+ 
   const filteredItems = selectedYear
-    ? items.filter(item => item.year.toString() === selectedYear) // Ensure comparison is done as strings
+    ? items.filter(item => item.year.toString() === selectedYear)
     : items;
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
@@ -44,14 +44,14 @@ const CardSection = ({ items }) => {
         <select 
           value={selectedYear} 
           onChange={(e) => {
-            setSelectedYear(e.target.value); // Set selectedYear as string
-            setCurrentPage(1); // Reset to the first page when the year changes
+            setSelectedYear(e.target.value); 
+            setCurrentPage(1); 
           }}
           className="px-3 py-1 rounded bg-primary text-white"
         >
           <option value="">Select Year</option>
           {years.map(year => (
-            <option key={year} value={year.toString()}>{year}</option> // Ensure year is string in the select options
+            <option key={year} value={year.toString()}>{year}</option> 
           ))}
         </select>
       </div>
@@ -73,7 +73,7 @@ const CardSection = ({ items }) => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-4 flex flex-wrap justify-center space-x-2 mb-6"> {/* Added mb-6 for bottom margin */}
+      <div className="mt-4 flex flex-wrap justify-center space-x-2 mb-6"> {/*  */}
         <button
           onClick={handlePrevious}
           disabled={currentPage === 1}
