@@ -8,6 +8,7 @@ import { ArrowRight, Award, Calendar, ChevronLeft, ChevronDown, ChevronRight, Ex
   Instagram,
   ExternalLinkIcon } from 'lucide-react';
 import StatsAndAchievements from "../components/StatsAndAchievements";
+import ContactUs from "../contactus";
 function Home() {
   return (
     <>
@@ -630,7 +631,7 @@ export const Footer = () => {
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
-
+          <ContactUs />
           {/* Newsletter Section */}
           <motion.div 
             {...fadeIn}
