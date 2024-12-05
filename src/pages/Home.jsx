@@ -175,65 +175,54 @@ export const MilestoneCard = ({ milestones }) => {
   const defaultMilestones = [
     {
       id:1,
-      image: `https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l16.jpg`,
-      date: `6 March 2020`,
-      heading: `Team Infinity Loop wins at L&T's CreaTech`,
-      description: `Team Infinity Loop comprising of three sophomores of Idea Innovation Cell put their best foot forward at L&T's CreaTech held in Mumbai in march, 2020 and came out with flying colors being 2nd Runner’s up. Their project "UJJWAL”, a variable intensity light was highly appreciated by the dignitaries.`,
-      link:"https://www.facebook.com/ideaclubvssut/photos/a.989653971133184/3028970853868142/?type=3&flite=scwspnss&extid=c71zTiJuuI24AE48",
+      image: `/images/block.jpg`,
+      date: `25 May 2020`,
+      heading: `Innovation Cell in collaboration with Enigma,The Coding Club brings forth its 2nd Webinar in the PIES Webinar Series on Blockchain For Digital Disruption`,
+      description: `*The More Foundational A Technology ,the More Impact It Can Have.* - William Mougayar
+Blockchain is the new talk of the town, but most people fail to realize its meaning and the true potential it holds. To unveil it's true magic and instill understanding among students, Idea & Innovation Cell in collaboration with Enigma,The Coding Club brings forth its 2nd Webinar in the PIES Webinar Series on Blockchain For Digital Disruption by the International Best-selling Blockchain Author and our Keynote Speaker *Mrs.Debajani Mohanty*. So what are you waiting for? Mark your calendar and note the time! This Opportunity will be knocking your doors on 31st May, 2020 at 11.00 AM.`,
+      link:"#",
   },
   {
       id:2,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/tech2.jpg`,
-      date:`11 August 2020`,
-      heading:`Team Tech2Buzz emerged as runners up in Tata Crucible Hackathon 2020.`,
-      description:`"Patience, persistence and perspiration make an unbeatable combination for success."
-      - Napoleon Hill
-      Team Tech2Buzz consisting of Yashraj Panda, Mukesh Nayak, Gyana Ranjan Sahoo, Rohit Kumar Das and Ayush Pandey of Idea Innovation Cell marked their success through their diligent and tenacious efforts and emerged as runners up in Tata Crucible Hackathon 2020.
-
-      Their project on designing a handhold device that can identify the minimal sizes of diamond and can prevent the smuggling of diamonds in stations and airports, was highly appreciated by jury members. Their solution is based on the property of thermal conductivity.
-      We heartily congratulate the team for this grand success and wish them the best of everything in their future endeavours as well . Congratulations team Tech2Buzz!`,
+      image:`/images/post1.png`,
+      date:`18 May 2020`,
+      heading:`The first ever webinar of the PIES series on "Intellectual Property Rights"`,
+      description:`Amidst the quarantine, Idea Innovation Cell VSSUT, Burla, organized the first ever webinar of the PIES series on "Intellectual Property Rights" for the students to enhance their interest in copyrights, patents, trademarks and trade secrets. The adepts in this field, Som Patra Sir (Founder of Kalinga Legal Services) and Abinash Kumar Puhan Sir (Group A gazetted officer, Intellectual property office) were the speakers in this technical caucus. Idea Innovation Cell heartily thanks both the speakers who enlightened the colloquy about intellectual property rights and patents, all the guests present in this convention as well as the technophile students who attended the webinar and made it a success. However the show has just begun, Stay tuned for the road ahead! .`,
       link:``,
   },
   {
       id:3,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img3.png`,
-      date:`16 February 2020`,
-      heading:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV`,
-      description:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV of VSSUT Burla (Odisha) at the National Startup Conclave organised in New Delhi, by Odisha Corporate Foundation and MSME (Govt of India)`,
+      image:`/images/post2.jpg`,
+      date:`14 May 2020`,
+      heading:`PIES series on "INTELLECTUAL PROPERTY RIGHTS " on 17th May, 2020 at 5.00 PM`,
+      description:`Innovation, entrepreneurship and space go hand in hand and flabbergast us with their each unfolding layer. This is the ultimate opportunity for all you techies out there. Mark your calendar, note the time and be ready to witness wonders. IIC, VSSUT brings you the first ever webinar of the PIES series on "INTELLECTUAL PROPERTY RIGHTS " on 17th May, 2020 at 5.00 PM by Som Patra ( Founder of KalingaLegal Services and 2006 Alumnus) and Abinash Kumar Puhan (Group A gazetted officer, Intellectual Property Office and 2014 Alumnus), the time-served in intellectual property rights. Some of the major topics they will be dealing with are: -IPR, Different Forms, Overview of Acts and Rules , IP valuation and Licencing -Patents, criteria of Patentability and Non-patentability, infringement and international patent filing system Don't miss your chance of being a part of this technical caucus. Don't just learn, Experience!`,
       link:``,
   },
   {
       id:4,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img1a.jpg`,
-      date:`30 January 2020`,
-      heading:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization.`,
-      description:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization. We also Interacted with IAS Dr. K.P. Krishnan, Secretary, Youth Enterprise- Ministry of Skill Development & Entrepreneurship and with IAS Arvind Padhee, Country Director ICRISAT in a series of strategic meetings with Govt. of India .`,
+      image:`/images/pies2.jpg`,
+      date:`10 May 2020`,
+      heading:`Space is for everybody`,
+      description:`Space is for everybody. It’s not just for a few people in science or math, or for a select group of astronauts. And the grip it holds on human curiosity even today is colossal. Astronomy in the 21st century is very different from what it used to be. Using electromagnetic radiation, radio waves and gamma rays, and beyond that to neutrinos and particles, the insights that we have gained into the zoo of celestial bodies in our universe is very different. These gigantic objects with their own control on space and time, their beginning and their end, make the story of astronomy today far more exciting. Do you hold a similar Passion for what lies beyond? Then, hop on! This is the ride you were waiting for.`,
       link:``,
   },
   {
       id:5,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img2.jpg`,
-      date:`2020`,
-      heading:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
-      description:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
+      image:`/images/pies3.jpg`,
+      date:`9 May 2020`,
+      heading:`Innovation is the specific tool of entrepreneurs`,
+      description:`Novel technology is and has always been a major source of innovation for entrepreneurs. Innovation is about the process and organisation needed to generate ideas in any context and it is the specific tool of entrepreneurs, the means by which they exploit change as an opportunity for a different business or a different service. Idea Innovation Cell brings on a plethora of such ideas from across the globe and give you a chance to discover the technocrat in you.`,
       link:``,
   },
   {
       id:6,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img4l.jpg`,
+      image:`/images/covid1.jpg`,
       date:`06 January 2020`,
       heading:`Interaction with Dr. K. Sivan`,
       description:`On 6th of January 2020, our Patrons Prof. Atal Chaudhuri ( Hon'ble Vice Chancellor) and Prof. Debadutta Mishra ( Chairman, ISRO Innovation Center) had a very positive meeting with Dr. K Sivan ( Chairman, ISRO- Indian Space Research Organization), Dr. Uma Maheswaran ( Scientific Secretary, ISRO), Mr. Jiwan Kumar Pandit ( Associate Director, HRD-CBPO, ISRO) and other senior officials at ISRO Headquarters, Bangalore. They handed over the citation and the Honoris Causa to India's Rocketman, Dr K.Sivan which had been awarded to him during the 11th Convocation of VSSUT Burla. They further discussed about our future association regarding ISRO Innovation Center. The official MoU between ISRO and VSSUT is expected to be formalized soon.`,
       link:``,
   },
-  {
-      id:7,
-      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l14.jpg`,
-      date:`16 January 2020`,
-      heading:`Our two teams made it among the top 100 makers of India in Maker Mela`,
-      description:`Our two teams made it among the top 100 makers of India in Maker Mela held at Mumbai in January 2020. The two projects at display - Affordable Cold storage and Sentinal . Both were extremely well received and appreciated by all the attendees.`,
-      link:``,
-  },
+
   ]
 
   const data = milestones || defaultMilestones;
@@ -254,7 +243,7 @@ export const MilestoneCard = ({ milestones }) => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
-          <h2 className="text-5xl font-heinch text-white mb-4">Milestones</h2>
+          <h2 className="text-5xl font-heinch text-white mb-4">Our Events</h2>
           <div className="h-px w-24 bg-blue-500"/>
         </motion.div>
 
@@ -490,10 +479,10 @@ export const RocketCard = ({ data }) => {
 
 const TeamCard = () => {
   const teamMembers = [
-    { id: 1, name: "Bodhisattwa Sanghapriya", description: "FORMER TEAM CAPTAIN", image: "/images/BodhisattwaSanghapriya.jpg", bio: 'Founding Year'},
-    { id: 2, name: "Om Prakash Das", description: "FORMER CHIEF COMMUNICATION OFFICER", image: "/images/OmPrakashDas.jpg", bio:'Founding Year' },
-    { id: 3, name: "Anurag Behera", description: "FORMER AVIONICS ARCHITECT", image: "/images/AnuragBehera.jpg", bio: 'Founding Year' },
-    { id: 4, name: "Anshuman Dikshit", description: "FORMER ELECTRONICS ARCHITECT", image: "/images/AnshumanDikshit.jpg", bio: 'Founding Year' },
+    { id: 1, name: "Debankar Shubhram", description: "Secretary", image: "/images/debankar.png", bio: 'Secretary'},
+    { id: 2, name: "Sandip Kumar Mohanty", description: "Asst.Secretary", image: "/images/sandip.png", bio:'Asst.Secretary' },
+    { id: 3, name: "Anurag Behera", description: "Asst.Secretary", image: "/images/satviki.png", bio: 'Asst.Secretary' },
+   // { id: 4, name: "Anshuman Dikshit", description: "FORMER ELECTRONICS ARCHITECT", image: "/images/AnshumanDikshit.jpg", bio: 'Founding Year' },
     // { id: 5, name: "Dinesh Kumar Mohanty", description: "FORMER APP DEVELOPER", image: "/images/DineshKumarMohanty.jpg", bio: 'Founding Year' },
   ]
 

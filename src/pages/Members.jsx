@@ -87,6 +87,26 @@ export const Members = () => {
     { id: 81, title: "Priyatii Panigrahy", description: "Core Electronics", image: "/images/flat-faces-icons-circle-man-6.png", year: 2021 },
     { id: 82, title: "Smrutishree Dhir", description: "Algorithm Analyst", image: "/images/smrutishree.jpg", year: 2021 },
     { id: 83, title: "Shweta Patel", description: "Core Management", image: "/images/swetaparna.jpg", year: 2021 },
+    { id: 84, title: "Debankar Shubhram", description: "Coordinator", image: "", year: 2024 },
+    { id: 85, title: "Famiya Tasneem", description: "Management lead", image: "", year: 2024 },
+    { id: 86, title: "Aditya Singh Rai", description: "Graphic designer lead", image: "", year: 2024 },
+    { id: 87, title: "Swagat ", description: "Video production Lead", image: "", year: 2024 },
+    { id: 88, title: "Ashish", description: "Content Lead ", image: "", year: 2024 },
+    { id: 89, title: "Rajiv ", description: "Content Lead", image: "", year: 2024 },
+    { id: 90, title: "Jyoti", description: "Mechanical lead", image: "", year: 2024 },
+    { id: 91, title: "Faizur ", description: "Mechanical lead", image: "", year: 2024 },
+    { id: 92, title: "Milan", description: "Chemical lead", image: "", year: 2024 },
+    { id: 93, title: "Ankita Dash ", description: "Chemical lead", image: "", year: 2024 },
+    { id: 94, title: "Inayat", description: "Electronics lead", image: "", year: 2024 },
+    { id: 95, title: "Pallabi ", description: "Electronics lead", image: "", year: 2024 },
+    { id: 96, title: "Tushar", description: "Coding lead", image: "", year: 2024 },
+    { id: 97, title: "Sibasis ", description: "Coding lead", image: "", year: 2024 },
+    { id: 98, title: "Aniket", description: "Web Dev. Lead", image: "", year: 2024 },
+    { id: 99, title: "Shubhankara ", description: "Rover captain", image: "", year: 2024 },
+    { id: 100, title: " Pritam ", description: "Project Designing Lead", image: "", year: 2024 },
+    { id: 101, title: "Abhijeet Rath", description: "Head of Public Relations", image: "", year: 2024 },
+    
+
   ];
 
   return (
