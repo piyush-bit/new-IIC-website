@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
-  
+
+  const menuItems = [
+    { name: 'Home', link: '/' },
+    { name: 'AboutUs', link: '/about-us' },
+    { name: 'Projects', link: '/project' },
+    // { name: 'Activities', link: '/activities' },
+    { name: 'All Events', link: '/all-events' },
+    { name: 'Achievements', link: '/achievements' },
+    { name: 'Team', link: '/members' },
+    { name: 'Blogs', link: '/blogs' },
+    { name: 'Contact', link: '/contact' },
+  ];
+
   // Transform scroll position to border radius
   // At top (0px): 0px border radius
   // At scroll (100px): 2rem (32px) border radius
@@ -33,7 +46,9 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <img src="/logo.png" alt="logo" className="w-10 h-10" />
+          <Link to="/">
+          <img  src="/logo.png" alt="logo" className="w-10 h-10" />
+          </Link>
         </motion.div>
 
         {/* Links and Hamburger */}
@@ -45,20 +60,16 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {[
-              'Home', 'About Us', 'Projects', 'Activities', 
-              'All Events', 'Achievements', 'Team', 'Blogs', 'Contact'
-            ].map((item, index) => (
+            {menuItems.map((item, index) => (
               <motion.a
                 key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
                 className="text-white hover:text-gray-200 transition-colors"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
                 whileHover={{ scale: 1.05 }}
               >
-                {item}
+                <Link to={item.link}>{item.name}</Link>
               </motion.a>
             ))}
           </motion.div>
@@ -111,22 +122,22 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {[
-            'Home', 'About Us', 'Projects', 'Activities',
-            'All Events', 'Achievements', 'Team', 'Blogs', 'Contact'
-          ].map((item, index) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className="block px-4 py-2 text-white hover:bg-blue-800 transition-colors"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: 0.05 * index }}
-              whileHover={{ x: 10 }}
-            >
-              {item}
-            </motion.a>
-          ))}
+          {menuItems.map((item, index) => (
+        <motion.div
+          key={item.name}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: 0.05 * index }}
+          whileHover={{ x: 10 }}
+        >
+          <Link
+            to={item.link}
+            className="block px-4 py-2 text-white hover:bg-blue-800 transition-colors"
+          >
+            {item.name}
+          </Link>
+        </motion.div>
+      ))}
         </motion.div>
       )}
     </motion.nav>
