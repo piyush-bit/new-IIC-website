@@ -24,17 +24,17 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {/*  */}
       <div className="flex flex-col md:flex-row gap-8 p-8">
         {/*  */}
         <div className="w-full md:w-1/2">
-          <h3 className="text-lg font-henich flex items-center gap-2">
+          <h3 className="text-lg font-henich flex items-center gap-2 font-heinch">
             <FaLocationArrow /> Location:
           </h3>
-          <p className="mt-2 font-henich text-sm">
-            Idea Innovation Cell, SAC, VSS University of Technology (Formerly known as University College of Engineering), Burla, Sambalpur - 768018
-          </p>
+          <p className="mt-2 font-henich text-sm font-heinch">
+            Idea Innovation Cell, SAC, VSS University of Technology (Formerly known as University College of Engineering), Burla, Sambalpur -<span className='font-sans text-[8px]'>768018</span>
+          </p> 
 
           <h3 className="text-lg font-henich flex items-center gap-2 mt-4">
             <FaEnvelope /> Email:
@@ -50,7 +50,7 @@ const ContactUs = () => {
 
         {/* Contact Form Section */}
         <div className="w-full md:w-1/2 border-l-4 border-blue-500 pl-8 md:pl-16 pt-6 md:pt-0">
-          <h3 className="text-lg font-semibold mb-4">Leave a message for us</h3>
+          <h3 className="text-xl font-semibold mb-4 font-heinch">Leave a message for us</h3>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <label className="text-sm font-medium">
               Name:
