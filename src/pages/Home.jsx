@@ -9,35 +9,22 @@ import { ArrowRight, Award, Calendar, ChevronLeft, ChevronDown, ChevronRight, Ex
   ExternalLinkIcon } from 'lucide-react';
 import StatsAndAchievements from "../components/StatsAndAchievements";
 import ContactUs from "../contactus";
+import { Link } from "react-router-dom";
 function Home() {
+
+    const rocketData = [
+      { title: "VSLV", summary: "India’s First Multipurpose Student Rocketry Mission- Launching our own satellite Launching vehicle to a height of 50+ km and deploying a Pico-sat which will monitor the Hirakud Dam along with these it can be used in different applications like Cloud Seeding, short range guided missile.", image: "/images/vslvlogofinal.png" },
+    { title: "Krishi Sevak", summary: "The Hand-Operated Rice Transplanter is a lightweight, easy to use and low cost machine. It is pedal operated and powered by hands. It has very low maintenance, and does not require any fuel. The parts are made from materials which can be easily obtained from any bicycle shop.", image: "/images/RicePlanterd.jpg" },
+    { title: "Aria", summary: "Air Quality Monitoring System- By integrating series of gas sensors modules with a microcontroller board to monitor the real time gas readings in PPM. A humidity and temperature sensor are also used to measure the surrounding temperature. A copy of this data is shown in a mini LCD display monitor.", image: "/images/ARIAd.jpg" },
+    { title: "Carbon scrubbing and automation", summary: "Using fumed silica impregnated with polyethylenimine in the inner walls of the chimney, which absorbs CO2 and storing them in absorber column pack. As the pack reaches the saturation point, then a pressure sensor transmits the message to extract required CO2 from it. It is carried out through a stream of superheated steam at around 120°C is passed through it.", image: "/images/Carbond.jpg" },
+    ]
   return (
     <>
       <section id="home" className="text-white mx-6 py-3">
         <HeroSection />
 
         <RocketCard 
-        data={[
-  {
-    title: "1",
-    summary: "Falcon Heavy is a partially reusable heavy-lift launch vehicle designed and manufactured by SpaceX. It is currently the world's most powerful operational rocket.",
-    image: "https://example.com/images/falcon-heavy.jpg"
-  },
-  {
-    title: "2",
-    summary: "Starship is a fully reusable spacecraft developed by SpaceX for missions to Mars, deep space, and Earth orbit. It's designed to carry both crew and cargo.",
-    image: "https://example.com/images/starship.jpg"
-  },
-  {
-    title: "CAN SAT",
-    summary: "Atlas V is an expendable launch system built by the United Launch Alliance, used for launching satellites into orbit, primarily for NASA and the U.S. Department of Defense.",
-    image: "https://example.com/images/atlas-v.jpg"
-  },
-  {
-    title: "VSLV",
-    summary: "Ariane 5 is a European heavy-lift launch vehicle developed by the European Space Agency. It has been widely used for commercial satellite launches.",
-    image: "https://example.com/images/ariane-5.jpg"
-  }
-]}      />
+        data={rocketData}      />
 
       </section>
       <section>
@@ -187,13 +174,67 @@ export const MilestoneCard = ({ milestones }) => {
   // Sample milestone data - replace with your actual data
   const defaultMilestones = [
     {
-      date: "2024",
-      title: "First Successful Launch",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg"
-    },
-    // Add more milestones here
-  ];
+      id:1,
+      image: `https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l16.jpg`,
+      date: `6 March 2020`,
+      heading: `Team Infinity Loop wins at L&T's CreaTech`,
+      description: `Team Infinity Loop comprising of three sophomores of Idea Innovation Cell put their best foot forward at L&T's CreaTech held in Mumbai in march, 2020 and came out with flying colors being 2nd Runner’s up. Their project "UJJWAL”, a variable intensity light was highly appreciated by the dignitaries.`,
+      link:"https://www.facebook.com/ideaclubvssut/photos/a.989653971133184/3028970853868142/?type=3&flite=scwspnss&extid=c71zTiJuuI24AE48",
+  },
+  {
+      id:2,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/tech2.jpg`,
+      date:`11 August 2020`,
+      heading:`Team Tech2Buzz emerged as runners up in Tata Crucible Hackathon 2020.`,
+      description:`"Patience, persistence and perspiration make an unbeatable combination for success."
+      - Napoleon Hill
+      Team Tech2Buzz consisting of Yashraj Panda, Mukesh Nayak, Gyana Ranjan Sahoo, Rohit Kumar Das and Ayush Pandey of Idea Innovation Cell marked their success through their diligent and tenacious efforts and emerged as runners up in Tata Crucible Hackathon 2020.
+
+      Their project on designing a handhold device that can identify the minimal sizes of diamond and can prevent the smuggling of diamonds in stations and airports, was highly appreciated by jury members. Their solution is based on the property of thermal conductivity.
+      We heartily congratulate the team for this grand success and wish them the best of everything in their future endeavours as well . Congratulations team Tech2Buzz!`,
+      link:``,
+  },
+  {
+      id:3,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img3.png`,
+      date:`16 February 2020`,
+      heading:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV`,
+      description:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV of VSSUT Burla (Odisha) at the National Startup Conclave organised in New Delhi, by Odisha Corporate Foundation and MSME (Govt of India)`,
+      link:``,
+  },
+  {
+      id:4,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img1a.jpg`,
+      date:`30 January 2020`,
+      heading:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization.`,
+      description:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization. We also Interacted with IAS Dr. K.P. Krishnan, Secretary, Youth Enterprise- Ministry of Skill Development & Entrepreneurship and with IAS Arvind Padhee, Country Director ICRISAT in a series of strategic meetings with Govt. of India .`,
+      link:``,
+  },
+  {
+      id:5,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img2.jpg`,
+      date:`2020`,
+      heading:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
+      description:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
+      link:``,
+  },
+  {
+      id:6,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img4l.jpg`,
+      date:`06 January 2020`,
+      heading:`Interaction with Dr. K. Sivan`,
+      description:`On 6th of January 2020, our Patrons Prof. Atal Chaudhuri ( Hon'ble Vice Chancellor) and Prof. Debadutta Mishra ( Chairman, ISRO Innovation Center) had a very positive meeting with Dr. K Sivan ( Chairman, ISRO- Indian Space Research Organization), Dr. Uma Maheswaran ( Scientific Secretary, ISRO), Mr. Jiwan Kumar Pandit ( Associate Director, HRD-CBPO, ISRO) and other senior officials at ISRO Headquarters, Bangalore. They handed over the citation and the Honoris Causa to India's Rocketman, Dr K.Sivan which had been awarded to him during the 11th Convocation of VSSUT Burla. They further discussed about our future association regarding ISRO Innovation Center. The official MoU between ISRO and VSSUT is expected to be formalized soon.`,
+      link:``,
+  },
+  {
+      id:7,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l14.jpg`,
+      date:`16 January 2020`,
+      heading:`Our two teams made it among the top 100 makers of India in Maker Mela`,
+      description:`Our two teams made it among the top 100 makers of India in Maker Mela held at Mumbai in January 2020. The two projects at display - Affordable Cold storage and Sentinal . Both were extremely well received and appreciated by all the attendees.`,
+      link:``,
+  },
+  ]
 
   const data = milestones || defaultMilestones;
 
@@ -287,7 +328,7 @@ export const MilestoneCard = ({ milestones }) => {
 
                 <div className="flex items-center gap-6">
                   <button className="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
-                    Read More
+                    <Link to={"/achievements"}>Read More</Link>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   
@@ -380,10 +421,10 @@ export const RocketCard = ({ data }) => {
                       </p>
                       <div className="mt-4 flex gap-4">
                         <button className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                          Learn More <ChevronRight className="w-4 h-4" />
+                          <Link to={"/projects"}>Learn More</Link> <ChevronRight className="w-4 h-4" />
                         </button>
                         <button className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                          Technical Specs <ExternalLink className="w-4 h-4" />
+                          <Link to={"/projects"}>Technical Specs</Link> <ExternalLink className="w-4 h-4" />
                         </button>
                       </div>
                     </motion.div>
@@ -449,35 +490,12 @@ export const RocketCard = ({ data }) => {
 
 const TeamCard = () => {
   const teamMembers = [
-    {
-      name: "Piyush",
-      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
-      designation: "CEO",
-      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
-      bio: "Tech enthusiast and visionary leader"
-    },
-    {
-      name: "Prateek",
-      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
-      designation: "CEO",
-      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
-      bio: "Innovation specialist and strategic thinker"
-    },
-    {
-      name: "Prateek",
-      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
-      designation: "CEO",
-      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
-      bio: "Innovation specialist and strategic thinker"
-    },
-    {
-      name: "Prateek",
-      image: "https://avatars.githubusercontent.com/u/106035971?v=4",
-      designation: "CEO",
-      linkedin: "https://www.linkedin.com/in/piyush-kumar-a-tech-enthusiast/",
-      bio: "Innovation specialist and strategic thinker"
-    }
-  ];
+    { id: 1, name: "Bodhisattwa Sanghapriya", description: "FORMER TEAM CAPTAIN", image: "/images/BodhisattwaSanghapriya.jpg", bio: 'Founding Year'},
+    { id: 2, name: "Om Prakash Das", description: "FORMER CHIEF COMMUNICATION OFFICER", image: "/images/OmPrakashDas.jpg", bio:'Founding Year' },
+    { id: 3, name: "Anurag Behera", description: "FORMER AVIONICS ARCHITECT", image: "/images/AnuragBehera.jpg", bio: 'Founding Year' },
+    { id: 4, name: "Anshuman Dikshit", description: "FORMER ELECTRONICS ARCHITECT", image: "/images/AnshumanDikshit.jpg", bio: 'Founding Year' },
+    // { id: 5, name: "Dinesh Kumar Mohanty", description: "FORMER APP DEVELOPER", image: "/images/DineshKumarMohanty.jpg", bio: 'Founding Year' },
+  ]
 
   const [hoveredMember, setHoveredMember] = useState(null);
 
@@ -488,7 +506,7 @@ const TeamCard = () => {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-7xl mx-auto px-6"
       >
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex justify-between  mb-12">
           <div>
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
@@ -503,7 +521,7 @@ const TeamCard = () => {
           <motion.button
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors"
+            className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors font-heinch md:items-end "
           >
             <a href="/members">View All Team</a> <ChevronRight className="w-4 h-4" />
           </motion.button>
@@ -542,7 +560,7 @@ const TeamCard = () => {
                   <p className="text-blue-400 mb-2">{member.designation}</p>
                   <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
                   
-                  <a
+                  {member.linkedin &&<a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -550,7 +568,7 @@ const TeamCard = () => {
                   >
                     <Linkedin className="w-4 h-4" />
                     Connect
-                  </a>
+                  </a>}
                 </motion.div>
               </div>
             </motion.div>

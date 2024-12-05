@@ -66,7 +66,7 @@ const StatisticsSection = ({ isVisible }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-heinch text-white mb-16"
+          className="text-3xl md:text-5xl font-heinch text-white mb-16"
         >
           Our Impact
         </motion.h2>
@@ -171,7 +171,7 @@ const AchievementsSection = ({ isVisible }) => {
         className="flex justify-between items-end mb-12"
       >
         <div>
-          <h2 className="text-5xl font-heinch text-white mb-4">Achievements</h2>
+          <h2 className="text-3xl md:text-5xl font-heinch text-white mb-4">Achievements</h2>
           <div className="h-1 w-24 bg-blue-500" />
         </div>
         
