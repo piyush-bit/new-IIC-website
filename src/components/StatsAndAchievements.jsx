@@ -137,30 +137,71 @@ const StatCard = ({ stat, index, isVisible }) => {
 };
 
 const AchievementsSection = ({ isVisible }) => {
-  const achievements = [
+  const achievements = 
+
+  [
     {
-      title: "Best Space Innovation",
-      description: "Recognized for groundbreaking advancements in rocket technology",
-      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg",
-      date: "2024",
-      category: "Innovation"
-    },
-    {
-      title: "Best Space Innovation",
-      description: "Recognized for groundbreaking advancements in rocket technology",
-      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg",
-      date: "2024",
-      category: "Innovation"
-    },
-    {
-      title: "Best Space Innovation",
-      description: "Recognized for groundbreaking advancements in rocket technology",
-      image: "https://images.pexels.com/photos/28176437/pexels-photo-28176437/free-photo-of-scented-candles-decor.jpeg",
-      date: "2024",
-      category: "Innovation"
-    }
-    // Add more achievements
-  ];
+      id:1,
+      image: `https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l16.jpg`,
+      date: `6 March 2020`,
+      title: `Team Infinity Loop wins at L&T's CreaTech`,
+      description: `Team Infinity Loop comprising of three sophomores of Idea Innovation Cell put their best foot forward at L&T's CreaTech held in Mumbai in march, 2020 and came out with flying colors being 2nd Runner’s up. Their project "UJJWAL”, a variable intensity light was highly appreciated by the dignitaries.`,
+      link:"https://www.facebook.com/ideaclubvssut/photos/a.989653971133184/3028970853868142/?type=3&flite=scwspnss&extid=c71zTiJuuI24AE48",
+  },
+  {
+      id:2,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/tech2.jpg`,
+      date:`11 August 2020`,
+      title:`Team Tech2Buzz emerged as runners up in Tata Crucible Hackathon 2020.`,
+      description:`"Patience, persistence and perspiration make an unbeatable combination for success."
+      - Napoleon Hill
+      Team Tech2Buzz consisting of Yashraj Panda, Mukesh Nayak, Gyana Ranjan Sahoo, Rohit Kumar Das and Ayush Pandey of Idea Innovation Cell marked their success through their diligent and tenacious efforts and emerged as runners up in Tata Crucible Hackathon 2020.
+
+      Their project on designing a handhold device that can identify the minimal sizes of diamond and can prevent the smuggling of diamonds in stations and airports, was highly appreciated by jury members. Their solution is based on the property of thermal conductivity.
+      We heartily congratulate the team for this grand success and wish them the best of everything in their future endeavours as well . Congratulations team Tech2Buzz!`,
+      link:``,
+  },
+  {
+      id:3,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img3.png`,
+      date:`16 February 2020`,
+      title:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV`,
+      description:`Hon'ble Union Minister of Petroleum & Natural Gas and Steel, Shri Dharmendra Pradhan spoke about Team VSLV of VSSUT Burla (Odisha) at the National Startup Conclave organised in New Delhi, by Odisha Corporate Foundation and MSME (Govt of India)`,
+      link:``,
+  },
+  {
+      id:4,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img1a.jpg`,
+      date:`30 January 2020`,
+      title:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization.`,
+      description:`Our Team VSLV interacted with Dr. Jitendra Singh Ji, Hon'ble Union Minister of State for Prime Minister Office, Personnel, Public Grievances & Pensions, Dept of Atomic Energy & Space ISRO - Indian Space Research Organization. We also Interacted with IAS Dr. K.P. Krishnan, Secretary, Youth Enterprise- Ministry of Skill Development & Entrepreneurship and with IAS Arvind Padhee, Country Director ICRISAT in a series of strategic meetings with Govt. of India .`,
+      link:``,
+  },
+  {
+      id:5,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img2.jpg`,
+      date:`2020`,
+      title:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
+      description:`Our Team VSLV interacted with Shri.Dharmendra Pradhan ji, Hon'ble Union Minister of Steel & Ministry of Petroleum and Natural Gas, Govt of India.`,
+      link:``,
+  },
+  {
+      id:6,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/img4l.jpg`,
+      date:`06 January 2020`,
+      title:`Interaction with Dr. K. Sivan`,
+      description:`On 6th of January 2020, our Patrons Prof. Atal Chaudhuri ( Hon'ble Vice Chancellor) and Prof. Debadutta Mishra ( Chairman, ISRO Innovation Center) had a very positive meeting with Dr. K Sivan ( Chairman, ISRO- Indian Space Research Organization), Dr. Uma Maheswaran ( Scientific Secretary, ISRO), Mr. Jiwan Kumar Pandit ( Associate Director, HRD-CBPO, ISRO) and other senior officials at ISRO Headquarters, Bangalore. They handed over the citation and the Honoris Causa to India's Rocketman, Dr K.Sivan which had been awarded to him during the 11th Convocation of VSSUT Burla. They further discussed about our future association regarding ISRO Innovation Center. The official MoU between ISRO and VSSUT is expected to be formalized soon.`,
+      link:``,
+  },
+  {
+      id:7,
+      image:`https://idea-innovation-cell-vssut.github.io/version_1/IIC-master/img/Achieve/l14.jpg`,
+      date:`16 January 2020`,
+      title:`Our two teams made it among the top 100 makers of India in Maker Mela`,
+      description:`Our two teams made it among the top 100 makers of India in Maker Mela held at Mumbai in January 2020. The two projects at display - Affordable Cold storage and Sentinal . Both were extremely well received and appreciated by all the attendees.`,
+      link:``,
+  },
+  ]
 
   return (
     <div>
@@ -228,7 +269,7 @@ const AchievementCard = ({ achievement, index, isVisible }) => {
       <div className="p-6 space-y-4">
         <div className="flex items-center gap-2 text-gray-400">
           <Award className="w-4 h-4" />
-          <span className="text-sm">{achievement.date}</span>
+          <span className="text-xs font-sans ">{achievement.date}</span>
         </div>
 
         <h3 className="text-2xl font-heinch text-white group-hover:text-blue-400 transition-colors">
