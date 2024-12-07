@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'heinch': ['Heinch' , 'sans-serif'], // Use "sans-serif" as a fallback
+        'heinch': ['Heinch-up','Heinch' , 'sans-serif'], // Use "sans-serif" as a fallback
       },
       colors: {
         'primary': '#1d2a42', // You can name it as you like
