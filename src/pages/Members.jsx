@@ -87,6 +87,7 @@ export const Members = () => {
     { id: 81, title: "Priyatii Panigrahy", description: "Core Electronics", image: "/images/flat-faces-icons-circle-man-6.png", year: 2021 },
     { id: 82, title: "Smrutishree Dhir", description: "Algorithm Analyst", image: "/images/smrutishree.jpg", year: 2021 },
     { id: 83, title: "Shweta Patel", description: "Core Management", image: "/images/swetaparna.jpg", year: 2021 },
+
     { id: 84, title: "Debankar Shubhram", description: "Coordinator", image: "/Image2024/img2.jpg", year: 2024 },
   { id: 85, title: "Famiya Tasneem", description: "Management lead", image: "/Image2024/img8.jpg", year: 2024 },
   { id: 86, title: "Aditya Singh Rai", description: "Graphic designer lead", image: "/Image2024/img18.jpg", year: 2024 },
@@ -151,6 +152,7 @@ export const Members = () => {
   { id: 141, title: "Prakriti Aloo", description: "", image: "", year: 2022 },
   { id: 142, title: "Nirlipta Parida", description: "", image: "", year: 2022 },
   { id: 143, title: "Ritika Kar", description: "", image: "", year: 2022 },
+
 
   ];
 

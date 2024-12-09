@@ -36,7 +36,9 @@ const Page = () => {
   ];
 
   return (
+
  <div className="container mx-auto max-w-screen-xl my-0"> {/*resovled css conflict by removing mx-1 */}
+
   {/* */}
   <CardSection cardData={cardData} />
 </div>
