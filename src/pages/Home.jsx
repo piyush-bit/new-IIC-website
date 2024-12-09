@@ -479,9 +479,9 @@ export const RocketCard = ({ data }) => {
 
 const TeamCard = () => {
   const teamMembers = [
-    { id: 1, name: "Debankar Shubhram", description: "Secretary", image: "/images/debankar.png", bio: 'Secretary'},
-    { id: 2, name: "Sandip Kumar Mohanty", description: "Asst.Secretary", image: "/images/sandip.png", bio:'Asst.Secretary' },
-    { id: 3, name: "satviki pradhan", description: "Asst.Secretary", image: "/images/satviki.png", bio: 'Asst.Secretary' },
+    { id: 1, name: "Swarup Halder", description: "", image: "/images/swarup.jpeg", bio: 'Coordinator'},
+    { id: 2, name: "Harsh Kumar", description: "Asst.Secretary", image: "/images/harsh.jpg", bio:'Asst. Coordinator' },
+    { id: 3, name: "Ipsita Nanda", description: "Asst.Secretary", image: "/images/ipsita.jpeg", bio: 'Asst. Coordinator' },
    // { id: 4, name: "Anshuman Dikshit", description: "FORMER ELECTRONICS ARCHITECT", image: "/images/AnshumanDikshit.jpg", bio: 'Founding Year' },
     // { id: 5, name: "Dinesh Kumar Mohanty", description: "FORMER APP DEVELOPER", image: "/images/DineshKumarMohanty.jpg", bio: 'Founding Year' },
   ]
