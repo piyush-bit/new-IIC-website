@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         'primary': '#1d2a42', // You can name it as you like
-      },
+      },    
     },
   },
   plugins: [],
