@@ -1,3 +1,4 @@
+import { form } from 'framer-motion/client';
 import React, { useState } from 'react';
 import { FaLocationArrow, FaEnvelope, FaPhone } from 'react-icons/fa';
 
@@ -16,6 +17,9 @@ const ContactUs = () => {
       [name]: value,
     });
   };
+
+  console.log(formData);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,7 +64,7 @@ const ContactUs = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full"
+                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full text-black"
               />
             </label>
 
@@ -72,7 +76,7 @@ const ContactUs = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full"
+                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full text-black"
               />
             </label>
 
@@ -83,7 +87,7 @@ const ContactUs = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full"
+                className="mt-2 p-3 border border-gray-300 rounded-md text-sm w-full text-black"
               />
             </label>
 
@@ -94,16 +98,27 @@ const ContactUs = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 required
-                className="mt-2 p-3 border border-gray-300 rounded-md text-sm h-32 w-full"
+                className="mt-2 p-3 border border-gray-300 rounded-md text-sm h-32 w-full text-black"
               />
             </label>
 
-            <button
-              type="submit"
-              className="mt-4 p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
-            >
-              Submit
-            </button>
+            
+              <a
+                  href={`mailto:iic.vssut@gmail.com?subject=Contact%20Us&body=Name:%20${encodeURIComponent(
+                    formData.name
+                  )}%0AEmail:%20${encodeURIComponent(formData.email)}%0APhone:%20${encodeURIComponent(
+                    formData.phone
+                  )}%0AMessage:%20${encodeURIComponent(formData.message)}`}
+                  className="mt-4 p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+                  onClick={(e) => {
+                    if (!formData.name || !formData.email || !formData.message) {
+                      e.preventDefault(); // Prevent navigation if required fields are missing
+                      alert('Please fill in all required fields.');
+                    }
+                  }}
+                >
+                  Submit
+                </a>
           </form>
         </div>
       </div>
@@ -112,5 +127,6 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
 
 
