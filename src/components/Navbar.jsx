@@ -8,14 +8,14 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Home', link: '/' },
-    { name: 'AboutUs', link: '/about-us' },
+    // { name: 'AboutUs', link: '/about-us' },
     { name: 'Projects', link: '/project' },
     // { name: 'Activities', link: '/activities' },
     { name: 'All Events', link: '/all-events' },
     { name: 'Achievements', link: '/achievements' },
     { name: 'Team', link: '/members' },
-    { name: 'Blogs', link: '/blogs' },
-    { name: 'Contact', link: '/contact' },
+    // { name: 'Blogs', link: '/blogs' },
+    { name: 'Contact', link: '#contact' },
   ];
 
   // Transform scroll position to border radius
@@ -69,7 +69,11 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: 0.1 * index }}
                 whileHover={{ scale: 1.05 }}
               >
-                <Link to={item.link}>{item.name}</Link>
+                {
+                  item.link === '#contact' ? 
+                  <Link to={item.link}>{item.name}</Link> :
+                  <a href={item.link}>{item.name}</a>
+                }
               </motion.a>
             ))}
           </motion.div>

@@ -610,7 +610,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white relative overflow-hidden">
+    <footer id="contact" className="bg-gradient-to-b from-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
