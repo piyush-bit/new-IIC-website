@@ -97,7 +97,7 @@ export const Members = () => {
   { id: 90, title: "Jyoti Prakash Jena", description: "Mechanical lead", image: "/Image2024/img11.jpg", year: 2025 },
   { id: 91, title: "Faizur Rahman", description: "Mechanical lead", image: "/Image2024/img14.jpg", year: 2025 },
   { id: 92, title: "Milan Ram", description: "Chemical lead", image: "/Image2024/img7.jpg", year: 2025 },
-  { id: 93, title: "Ankita Dash", description: "Chemical lead", image: "", year: 2025 },
+  { id: 93, title: "Ananya Pradhan", description: "Chemical lead", image: "/images/chemco.jpg", year: 2025 },
   { id: 94, title: "Inayatulla Khan", description: "Electronics lead", image: "/Image2024/img1.jpg", year: 2025 },
   { id: 95, title: "Pallabi Parimita Nayak", description: "Electronics lead", image: "/Image2024/img5.jpg", year: 2025 },
   { id: 96, title: "Tushar Panigrahi", description: "Coding lead", image: "/Image2024/img12.jpg", year: 2025 },
