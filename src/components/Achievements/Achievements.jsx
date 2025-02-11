@@ -457,7 +457,7 @@ function Achievements() {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-2 py-1 border rounded-full bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
+          className="px-2 py-1 border rounded-full text-black~ bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
         >
           &lt;
         </button>
@@ -477,7 +477,7 @@ function Achievements() {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-2 py-1 border rounded-full bg-gray-300 hover:bg-gray-400 disabled:opacity-50 "
+          className="px-2 py-1 border rounded-full text-black bg-gray-300 hover:bg-gray-400 disabled:opacity-50 "
         >
           &gt;
         </button>
