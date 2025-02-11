@@ -8,6 +8,7 @@ import Home from "./pages/Home"
 import { Members } from "./pages/Members";
 import Achievements from "./components/Achievements/Achievements";
 import Project from "./pages/Project";
+import Countdown from "./components/Countdown/Countdown";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/members" element={<Members/>} />
         <Route path="/achievements" element={<Achievements/>} />
         <Route path="/project" element={<Project/>} />
+        <Route path="/countdown" element={<Countdown/>} />
       </Routes>
     </Router>
   )
