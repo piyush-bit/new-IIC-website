@@ -34,6 +34,7 @@ function App() {
     <Route path="/project" element={<Project/>} />
     <Route path="/countdown" element={<Countdown/>} />
     <Route path="/ticket" element={<Ticket />} />
+    {/* <Route path="/newticket" element={<NewTicket />} /> */}
   </Routes>
 </Router>)
 };
