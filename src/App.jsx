@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import Countdown from "./components/Countdown/Countdown";
 import Loading from "./components/Loading/Loading";
 import { useState ,useEffect } from "react";
+import Ticket from "./components/Ticket/Ticket.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ function App() {
     <Route path="/achievements" element={<Achievements/>} />
     <Route path="/project" element={<Project/>} />
     <Route path="/countdown" element={<Countdown/>} />
+    <Route path="/ticket" element={<Ticket />} />
   </Routes>
 </Router>)
 };
