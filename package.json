@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^4.0.0",
+
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.2",
@@ -26,8 +26,8 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^6.27.0",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.2"
+    "tailwindcss-animate": "^1.0.7"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
@@ -43,6 +43,7 @@
     "postcss": "^8.4.47",
     "shadcn-ui": "^0.9.4",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

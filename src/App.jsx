@@ -11,8 +11,7 @@ import Project from "./pages/Project";
 import Countdown from "./components/Countdown/Countdown";
 import Loading from "./components/Loading/Loading";
 import { useState ,useEffect } from "react";
-import Ticket from "./components/Ticket/Ticket.jsx";
-// import NewTicket from "./components/Ticket/New_Ticket.jsx";
+import Ticket from "./components/Ticket/New_Ticket.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
