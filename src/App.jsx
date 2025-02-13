@@ -12,6 +12,7 @@ import Countdown from "./components/Countdown/Countdown";
 import Loading from "./components/Loading/Loading";
 import { useState ,useEffect } from "react";
 import Ticket from "./components/Ticket/New_Ticket.jsx";
+import BackgroundBeams from "./components/BackgroundBeams/BackgroundBeams.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ function App() {
     <Route path="/project" element={<Project/>} />
     <Route path="/countdown" element={<Countdown/>} />
     <Route path="/ticket" element={<Ticket />} />
+    <Route path="/background-beams" element={<BackgroundBeams />} />
   </Routes>
 </Router>)
 };
