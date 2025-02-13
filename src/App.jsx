@@ -29,10 +29,10 @@ function App() {
   <Router>
   <Navbar/>
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/members" element={<Members/>} />
-    <Route path="/achievements" element={<Achievements/>} />
-    <Route path="/project" element={<Project/>} />
+    {/* <Route path="/" element={<Home />} /> */}
+    {/* <Route path="/members" element={<Members/>} /> */}
+    {/* <Route path="/achievements" element={<Achievements/>} /> */}
+    {/* <Route path="/project" element={<Project/>} /> */}
     <Route path="/countdown" element={<Countdown/>} />
     <Route path="/ticket" element={<Ticket />} />
     <Route path="/background-beams" element={<BackgroundBeams />} />
