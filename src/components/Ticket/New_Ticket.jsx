@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ticketTemplate from "./New_Ticket.jpg"; // Ensure this path is correct
+import ticketTemplate from "./New_Ticket.png"; // Ensure this path is correct
+import BackgroundBeams from "../BackgroundBeams/BackgroundBeams";
 
 const Ticket = () => {
   const [formData, setFormData] = useState({
@@ -77,6 +78,19 @@ const Ticket = () => {
       return;
     }
     const ticketDataUrl = await createTicketImage();
+    const BACKEND_URI = import.meta.env.VITE_BACKEND_URI;
+    fetch(BACKEND_URI+"/api/students", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name : formData.userName,
+        email : formData.userEmail,
+        department : formData.branch,
+        registration : formData.registrationNumber
+      }),
+    }).then((res) => res.json());
     setTicketPreview(ticketDataUrl);
     setShowPreview(true);
   };
@@ -91,8 +105,9 @@ const Ticket = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <Card className="max-w-2xl mx-auto">
+    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+      
+      <Card className="max-w-2xl mx-auto bg-white z-[1000] ">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-2xl font-bold text-center">
             <Tag className="w-6 h-6" />
@@ -102,13 +117,43 @@ const Ticket = () => {
         <CardContent className="space-y-6">
           <div className="space-y-4">
             <Label htmlFor="userName">Full Name</Label>
-            <Input id="userName" value={formData.userName} onChange={handleInputChange("userName")} />
+            <Input
+              id="userName"
+              value={formData.userName}
+              onChange={handleInputChange("userName")}
+              required
+              pattern="^[a-zA-Z\s]+$"
+              title="Only letters and spaces allowed"
+            />
             <Label htmlFor="userEmail">Email</Label>
-            <Input id="userEmail" type="email" value={formData.userEmail} onChange={handleInputChange("userEmail")} />
+            <Input
+              id="userEmail"
+              type="email"
+              value={formData.userEmail}
+              onChange={handleInputChange("userEmail")}
+              required
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              title="Invalid email address"
+            />
             <Label htmlFor="branch">Branch</Label>
-            <Input id="branch" value={formData.branch} onChange={handleInputChange("branch")} />
+            <Input
+              id="branch"
+              value={formData.branch}
+              onChange={handleInputChange("branch")}
+              required
+              pattern="^[a-zA-Z\s]+$"
+              title="Only letters and spaces allowed"
+            />
             <Label htmlFor="registrationNumber">Registration Number</Label>
-            <Input id="registrationNumber" value={formData.registrationNumber} onChange={handleInputChange("registrationNumber")} />
+            <Input
+              id="registrationNumber"
+              type="number"
+              value={formData.registrationNumber}
+              onChange={handleInputChange("registrationNumber")}
+              required
+              pattern="^[0-9]+$"
+              title="Only numbers allowed"
+            />
             <Label>Profile Picture</Label>
             <Input type="file" accept="image/*" onChange={handleProfileImageChange} />
           </div>
@@ -131,6 +176,7 @@ const Ticket = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      <BackgroundBeams className="absolute z-[-1]"/>
     </div>
   );
 };
