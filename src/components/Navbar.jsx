@@ -7,7 +7,7 @@ const Navbar = () => {
   const { scrollY } = useScroll();
 
   const menuItems = [
-    { name: 'Home', link: '/' },
+    { name: 'Home', link: '/countdown' },
     // { name: 'AboutUs', link: '/about-us' },
     // { name: 'Projects', link: '/project' },
     // { name: 'Activities', link: '/activities' },
@@ -46,7 +46,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Link to="/">
+          <Link to="/countdown">
           <img  src="/logo.png" alt="logo" className="w-10 h-10" />
           </Link>
         </motion.div>
