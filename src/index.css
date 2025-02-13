@@ -16,6 +16,13 @@
     font-style: normal;
   }
   
+  @font-face {
+    font-family: 'gotham';
+    src: url('gotham/Gotham Fonts Family/GOTHAM-BLACK.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
   body{
     background-color: black ;
   }
@@ -47,6 +54,7 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+        
     }
   .dark {
         --background: 240 10% 3.9%;

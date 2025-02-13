@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import BackgroundBeams from "../BackgroundBeams/BackgroundBeams";
+import { Link } from "react-router-dom";
 
 const LaunchCountdown = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 13,
-    hours: 23,
-    minutes: 59,
-    seconds: 52,
+  const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+  const [timeLeft, setTimeLeft] = useState( {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((difference % (1000 * 60)) / 1000),
   });
 
   useEffect(() => {
@@ -39,37 +46,36 @@ const LaunchCountdown = () => {
   );
 
   return (
-    <div className="relative min-h-screen h-full bg-gradient-to-b z-[-2] from-black to-[#0D1321] flex items-center w-full">
+    <div className="relative min-h-screen h-full bg-gradient-to-b  from-black to-[#0D1321] flex items-center w-full gotham">
       <div className="h-screen min-w-full w-full flex">
         <div className="relative text-left my-auto flex flex-col w-full items-center justify-center">
-            <div className="max-w-2xl w-full text-center">
-              {/* Enhanced gradient heading */}
-              <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-gray-500 via-gray-200 to-gray-400 text-transparent bg-clip-text animate-gradient">
+          <div className="max-w-2xl w-full text-center">
+            <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-gray-500 via-gray-200 to-gray-400 text-transparent bg-clip-text animate-gradient">
               The Countdown Begins
-              </h1>
-
-              {/* Description with more metallic feel */}
-              <p className="text-gray-400 mb-8 text-lg max-w-xl mx-auto bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text">
-              Tick. Tock. Time is slipping away. In:
-              </p>
-
-            </div>
-
-            <div className="flex flex-wrap space-x-4 justify-center">
-              <TimeBox value={timeLeft.days} label="Days" />
-              <TimeBox value={timeLeft.hours} label="Hours" />
-              <TimeBox value={timeLeft.minutes} label="Minutes" />
-              <div className="hidden md:block">
-              <TimeBox value={timeLeft.seconds} label="Seconds" />
-              </div>
-            </div>
-            <p className="text-gray-400 mb-8 text-lg max-w-xl mx-auto bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text text-center mt-10 px-3">
-            The cycle begins again. Secrets will surface, and reality will twist before your eyes. Prepare for what lies beyond—once it starts, there’s no turning back.
+            </h1>
+            <p className="text-gray-400 mb-8 text-2xl max-w-xl mx-auto bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text">
+              ETERNO HORIZON
             </p>
-            <button></button>
           </div>
+          <div className="flex flex-wrap space-x-4 justify-center">
+            <TimeBox value={timeLeft.days} label="Days" />
+            <TimeBox value={timeLeft.hours} label="Hours" />
+            <TimeBox value={timeLeft.minutes} label="Minutes" />
+            <div className="hidden md:block">
+              <TimeBox value={timeLeft.seconds} label="Seconds" />
+            </div>
+          </div>
+          <Link to="/ticket">
+            <button className="mt-5 py-2 px-7 bg-transparent text-white border-2 rounded-md border-blue-500 text-lg tracking-wide z-[1000]">
+              DIVE INT
+            </button>
+          </Link>
+          <p className="text-gray-400 mb-8 text-lg max-w-xl mx-auto bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 bg-clip-text text-center mt-7 px-3">
+            The cycle begins again. Secrets will surface, and reality will twist before your eyes. Prepare for what lies beyond—once it starts, there's no turning back.
+          </p>
         </div>
-        <BackgroundBeams className="absolute z-[-1]"/>
+      </div>
+      <BackgroundBeams className="absolute z-[-1]" />
     </div>
   );
 };
