@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 // import logo from "./Ticket.jpg";
-import logo from "./New_Ticket.png";
+import logo from "./New_Ticket.jpg";
 
 import "./Tickets.css";
 
