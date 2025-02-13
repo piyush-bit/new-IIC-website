@@ -46,7 +46,9 @@ const LaunchCountdown = () => {
   );
 
   return (
-    <div className="relative min-h-screen h-full bg-gradient-to-b from-black to-[#0D1321] flex items-center w-full gotham">
+    <div className="relative min-h-screen h-full bg-gradient-to-b bg-transparent from-black to-[#0D1321] flex items-center w-full gotham">
+
+      <BackgroundBeams className="absolute z-[0]" />
       <div className="h-screen min-w-full w-full flex">
         <div className="relative text-left my-auto flex flex-col w-full items-center justify-center">
           <div className="max-w-2xl w-full text-center">
@@ -75,7 +77,6 @@ const LaunchCountdown = () => {
           </p>
         </div>
       </div>
-      <BackgroundBeams className="absolute " />
     </div>
   );
 };

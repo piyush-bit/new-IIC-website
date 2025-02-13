@@ -35,7 +35,7 @@ const Ticket = () => {
     }
   };
 
-  const createTicketImage = async () => {
+  const createTicketImage = async (id) => {
     return new Promise((resolve) => {
         const canvas = document.createElement("canvas");
         const ctx = canvas.getContext("2d");
@@ -93,12 +93,11 @@ const Ticket = () => {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             
-            const number =Number(count) ;
-            const randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+            
             
             
             // Draw the rotated text at (0,0) since we've already translated
-            ctx.fillText(number ? (7100 + number).toString() : 7100+randomNumber, 0, -40);
+            ctx.fillText(7000+id, 0, -40);
             
             // Restore the context to its original state
             ctx.restore();
@@ -139,10 +138,12 @@ const Ticket = () => {
     const c = await response.json();
     setLoading(false)
     setCount(c.count);
-    console.log(c);
+
+
+    await new Promise(resolve => setTimeout(resolve, 200));
     
 
-    const ticketDataUrl = await createTicketImage();
+    const ticketDataUrl = await createTicketImage(Number(c.count));
     fetch(BACKEND_URI+"/api/students", {
       method: "POST",
       headers: {
