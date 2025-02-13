@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Upload, Download, Tag } from "lucide-react";
+import { Upload, Download, Tag, Loader2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,7 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ticketTemplate from "./New_Ticket.png"; // Ensure this path is correct
 import BackgroundBeams from "../BackgroundBeams/BackgroundBeams";
 
+
 const Ticket = () => {
+  const [count,setCount]=useState();
+  const [loading,setLoading]=useState();
   const [formData, setFormData] = useState({
     userName: "",
     userEmail: "",
@@ -34,51 +37,112 @@ const Ticket = () => {
 
   const createTicketImage = async () => {
     return new Promise((resolve) => {
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-      const img = new Image();
-      img.src = ticketTemplate;
-      img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        const img = new Image();
+        img.src = ticketTemplate;
 
-        ctx.fillStyle = "#fff";
-        ctx.textAlign = "center";
-        ctx.font = "bold 40px Inter, sans-serif";
-        ctx.fillText(formData.userName, canvas.width / 2, 300);
-        ctx.font = "24px Inter, sans-serif";
-        ctx.fillText(formData.userEmail, canvas.width / 2, 350);
-        ctx.fillText(`Branch: ${formData.branch}`, canvas.width / 2, 400);
-        ctx.fillText(`Reg No: ${formData.registrationNumber}`, canvas.width / 2, 450);
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
 
-        if (selectedImage) {
-          const profileImg = new Image();
-          profileImg.src = selectedImage;
-          profileImg.onload = () => {
+            // Define text box properties
+            const textBoxWidth = 300; // Width of the text box
+            const textBoxHeight = 60; // Height of the text box
+            const leftPadding = 40;  // Position where the original username was
+            const textY = 350;        // Y position of the text
+            const boxY = textY - textBoxHeight + 20; // Adjust for vertical positioning
+
+            // Draw the text box with a visible color
+            ctx.fillStyle = "rgba(0, 0, 0, 0.5)"; // Semi-transparent black box
+            ctx.fillRect(leftPadding, boxY, textBoxWidth, textBoxHeight);
+
+            // Set text properties
+            ctx.fillStyle = "#fff"; // White text color
+            ctx.font = "bold 40px Inter, sans-serif";
+            ctx.textAlign = "left"; // Temporarily set to left to measure text width
+
+            // Measure text width
+            const textWidth = ctx.measureText(formData.userName).width;
+            
+            // Calculate x-position to center text inside the box
+            const textX = leftPadding + (textBoxWidth - textWidth) / 2;
+
+            // Draw centered text
+            ctx.fillText(formData.userName, textX, textY);
+
+            // Save the current context state for rotated text
             ctx.save();
-            ctx.beginPath();
-            ctx.arc(150, 150, 50, 0, Math.PI * 2);
-            ctx.closePath();
-            ctx.clip();
-            ctx.drawImage(profileImg, 100, 100, 100, 100);
+            
+            // Set text properties for rotated text
+            ctx.fillStyle = "#000";
+            ctx.font = "bold 40px Inter, sans-serif";
+            
+            // Move to the position where you want the rotated text to be
+            const rotatedTextX = canvas.width - 50; // Distance from right edge
+            const rotatedTextY = canvas.height / 2; // Vertical center
+            
+            // Translate to the position where we want to rotate around
+            ctx.translate(rotatedTextX, rotatedTextY);
+            
+            // Rotate -90 degrees (anticlockwise)
+            ctx.rotate(-Math.PI / 2);
+            
+            // Set text alignment for rotated text
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            
+            const number =Number(count) ;
+            const randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
+            
+            
+            // Draw the rotated text at (0,0) since we've already translated
+            ctx.fillText(number ? (7100 + number).toString() : 7100+randomNumber, 0, -40);
+            
+            // Restore the context to its original state
             ctx.restore();
-            resolve(canvas.toDataURL("image/png"));
-          };
-        } else {
-          resolve(canvas.toDataURL("image/png"));
-        }
-      };
+
+            if (selectedImage) {
+                const profileImg = new Image();
+                profileImg.src = selectedImage;
+                profileImg.onload = () => {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(193, 173, 128, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.clip();
+                    ctx.drawImage(profileImg, 68, 48, 255, 255);
+                    ctx.restore();
+                    resolve(canvas.toDataURL("image/png"));
+                };
+            } else {
+                resolve(canvas.toDataURL("image/png"));
+            }
+        };
     });
-  };
+};
+
+
 
   const handleGenerateTicket = async () => {
     if (!formData.userName || !formData.userEmail || !formData.branch || !formData.registrationNumber) {
       alert("Please fill in all fields.");
       return;
     }
-    const ticketDataUrl = await createTicketImage();
+
     const BACKEND_URI = import.meta.env.VITE_BACKEND_URI;
+    setLoading(true)
+    const response = await fetch(BACKEND_URI+"/api/students/count", {
+      method: "GET",
+    })
+    const c = await response.json();
+    setLoading(false)
+    setCount(c.count);
+    console.log(c);
+    
+
+    const ticketDataUrl = await createTicketImage();
     fetch(BACKEND_URI+"/api/students", {
       method: "POST",
       headers: {
@@ -116,7 +180,7 @@ const Ticket = () => {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-4">
-            <Label htmlFor="userName">Full Name</Label>
+            <Label htmlFor="userName">Name</Label>
             <Input
               id="userName"
               value={formData.userName}
@@ -158,7 +222,10 @@ const Ticket = () => {
             <Input type="file" accept="image/*" onChange={handleProfileImageChange} />
           </div>
           <Button onClick={handleGenerateTicket}>
-            <Upload className="w-4 h-4 mr-2" /> Generate Ticket
+            {loading ?<><Loader2 className="animate-spin" />
+              Please wait</> :
+            <><Upload className="w-4 h-4 mr-2" /> Generate Ticket</>
+              }
           </Button>
         </CardContent>
       </Card>
